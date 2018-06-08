@@ -79,6 +79,8 @@ int main(void)
  
  bm = numa_get_membind();
 
+ printf("numa_bitmask_nbytes(): %d\n", numa_bitmask_nbytes(bm));
+
  int i; 
  printf("bm->size=%lx\n", bm->size);
  for (i = 0; i < bm->size / (8 * sizeof(unsigned long)); i++) {
